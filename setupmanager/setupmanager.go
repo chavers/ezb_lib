@@ -69,7 +69,7 @@ func AskForValue(s string, pattern string) string {
 }
 
 // CheckFolder
-func CheckFolder(isIntSess bool, exPath string) error {
+func CheckFolder(exPath string) error {
 
 	if _, err := os.Stat(path.Join(exPath, "cert")); os.IsNotExist(err) {
 		err = os.MkdirAll(path.Join(exPath, "cert"), 0600)
